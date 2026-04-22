@@ -1,0 +1,26 @@
+name: Run Tredict Invictus Bot
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Bot
+        run: node clover.js

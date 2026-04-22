@@ -1,4 +1,4 @@
 module.exports = {
-  githubToken: "ISI_GITHUB_TOKEN_DISINI",
+  githubToken: "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",
   githubUser: "bayus613-wq"
 };
